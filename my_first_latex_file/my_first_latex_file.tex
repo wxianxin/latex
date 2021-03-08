@@ -1,0 +1,215 @@
+\documentclass[12pt]{article}
+%\usepackage[left=12mm, right=12mm, top=0.5in, bottom=12mm]{geometry}
+
+\begin{document}
+\title{my first \LaTeX \ file}
+\author{Steven Wang}
+\date{\today}
+\maketitle
+
+\tableofcontents
+%Need to be built twice
+
+\section{Introduction}
+This is the sample intro.\\
+This is the 2nd line.\\
+This is the 3rd line.\\
+%"\\" create different lines; "soft return"
+
+
+\section{Math}
+
+\subsection{Math Mode}
+A rectangular with side lenth $(x+1)$ and $(x+3)$
+% $(.)$ turn into math
+
+% $ inline math mode
+% $$ 
+Take the quation $ax^2+bx+c=0$ as an example.\\
+Take the quation $$ax^2+bx+c=0$$ as an example.
+
+\subsection{Common Math Notation}
+superscripts:
+$$2x^34$$
+$$2x^{34}$$
+$$2x^{3x+4}$$
+$$2x^{3x^4+5}$$
+
+subscripts:
+$$x_1$$
+$$x_{12}$$
+$${x_1}_2$$
+
+greek letters:
+$$\pi$$
+$$A=\pi r^2$$
+
+trig functions:
+$$\sin{x}$$
+$$\tan{x}$$
+$$y=\sin{x}$$
+%You could type in plain text mode. But put it in tex mode, it italicize the variable and space everything properly.
+
+log functions:
+$$\log{x}$$
+$$\ln{x}$$
+$$\log_5{x}$$
+
+square roots:
+$$\sqrt{x}$$
+$$\sqrt[3]{x}$$
+$$\sqrt[4]{x+\sqrt[3]{y}}$$
+
+fractions:\\
+About 2/3 of the glass is full.\\
+About $\frac{2}{3}$ of the glass is full.\\
+About $\displaystyle{\frac{2}{3}}$ of the glass is full.
+
+$$\frac{x}{x^2+x+1}$$
+$$\frac{1}{1+\frac{1}{x}}$$
+
+
+\subsection{Equations}
+
+\begin{equation}
+\alpha=\beta
+\end{equation}
+
+\section{Brackets, Tables and Arrays}
+
+brackets:
+
+$$(x+1)$$
+$$[x+1]$$
+$$\{x+1\}$$
+$$\$12.55$$
+
+$$3(\frac{2}{3})$$
+$$3\left(\frac{2}{3}\right)$$
+$$3\left[\frac{2}{3}\right]$$
+$$3\left\{\frac{2}{3}\right\}$$
+
+Abosolute value:
+$$|x|$$
+$$|\frac{x}{y}|$$
+$$\left|\frac{x}{y}\right|$$
+
+$$\left\{x^2\right\}$$
+$$\left\{x^2\right.$$
+%If you only need half of the brackets
+$$\left.\frac{dy}{dx}\right|_{x=1}$$
+%derivatives
+
+Tables:
+\begin{tabular}{|c|ccccc|}
+%use the pipe to insert vertical bar
+%6 columns with centered entry
+
+$x$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+%horizontal line, after the role
+$f(x)$ & 10 & 11 & 12 & 13 & 14 \\
+
+\end{tabular}
+
+Table borders:
+\begin{tabular}{|c|ccccc|}
+\hline
+$x$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+$f(x)$ & 10 & 11 & 12 & 13 & 14 \\
+\hline
+\end{tabular}
+
+Array:
+
+\begin{eqnarray}
+%automatically in math mode, we do not need to use "$" sign
+5x^2-9=x+3\\
+5x^2-12=x\\
+x^2=3\\
+x\approx\pm1.732
+\end{eqnarray}
+
+\begin{eqnarray}
+%automatically in math mode, we do not need to use "$" sign
+5x^2-9&=&x+3\\
+5x^2-12&=&x\\
+x^2&=&3\\
+x&\approx&\pm1.732
+\end{eqnarray}
+
+\section{Lists}
+
+\begin{enumerate}
+\item pencil
+\item ruler
+\item eraser
+\item calculator
+\item notebook
+	\begin{enumerate}
+	\item assessments
+		\begin{enumerate}
+		\item tests
+		\item quizzes
+		\end{enumerate}
+	\item homework
+	\item notes
+	\end{enumerate}
+\item paper
+\end{enumerate}
+
+\begin{itemize}
+\item pencil
+\item ruler
+\item eraser
+\item calculator
+\item notebook
+	\begin{itemize}
+	\item assessments
+		\begin{itemize}
+		\item tests
+		\item quizzes
+		\end{itemize}
+	\item homework
+	\item notes
+	\end{itemize}
+\item paper
+\end{itemize}
+
+\begin{enumerate}
+\item[Commutative] $a+b=b+a$
+\item[Associative] $(a+b)+c=a+(b+c)$
+\item[Distributive] $a(b+c)=ab+ac$
+\end{enumerate}
+
+\section{Text Formatting}
+
+\subsection{Fonts}
+
+This will produce \textit{italicized} text.
+
+This will produce \textbf{bold-faced} text.
+
+This will produce \textsc{small caps} text.
+
+This will produce \texttt{teletype} font.
+%texttt is particularly good for URL
+
+Please visit \texttt{stevenwang.ddns.net}
+
+Please accept my \begin{large} apology \end{large}.
+
+Please accept my \begin{huge} apology \end{huge}.
+
+Please accept my \begin{small} apology \end{small}.
+
+Please accept my \begin{tiny} apology \end{tiny}.
+
+\subsection{Justification}
+
+\begin{center}This is centered.\end{center}
+
+\begin{flushleft}This is left-justified.\end{flushleft}
+%this does not indent
+\begin{flushright}This is left-justified.\end{flushright}
+
+\end{document}

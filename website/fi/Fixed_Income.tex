@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+
+\begin{document}
+\title{Fixed Income}
+\author{Steven Wang}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\section{Section 1}
+$$P_{swap}=P_{floater}-P_{fixed}$$
+$$P_{swap}=Cap-Floor$$
+
+$$B(t,T)=e^{-\int_t^T r_u du+\int_t^T \gamma(u,T)dW_u^*}$$
+$$dB(t,T)=B(t,T)(r_t dt+\gamma(t,T)dW_t^*)$$
+
+$$d(log(B(t,T)))=\frac{1}{B(t,T)}d(B(t,T))-\frac{1}{2B(t,T)^2}d<B(t,T)>$$
+$$=r_t dt+\gamma(t,T)dW_t^*-\frac{1}{2}(\gamma(t,T)^2 dt)$$
+$$=r_t dt-\frac{1}{2}\gamma^2(t,T)dt+\gamma(t,T)dW_t^*$$
+
+$$log(B(t,T))=\int_0^t r_u du-\frac{1}{2}\int_0^t\gamma^2(u,T)du+\int_0^t\gamma(u,T)dW_t^*+logB(0,T)$$
+$$B(t,T)=B(0,T)\cdot e^{\int_0^t r_u du-\frac{1}{2}\int_0^t\gamma^2(u,T)du+\int_0^t\gamma(u,T)dW_t^*}$$
+$$\frac{B(t,T)}{B(0,T)}=S_t^0\cdot \underbrace{e^{-\frac{1}{2}\int_0^t||\gamma(u,T)||^2du+\int_0^t\gamma(t,T)dW_t^*}}_{M(t,T)}$$
+
+
+
+
+\end{document}
